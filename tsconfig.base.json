@@ -32,6 +32,9 @@
       ],
       "@aqui-pide-core/data-graphql": [
         "libs/data-graphql/src/index.ts"
+      ],
+      "@aqui-pide-core/data-models": [
+        "libs/data-models/src/index.ts"
       ]
     }
   },
