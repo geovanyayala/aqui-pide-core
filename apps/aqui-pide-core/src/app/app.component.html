@@ -2,6 +2,20 @@
   (sideNavToggle)="sideNavToggle()"
 ></aqui-pide-core-global-header>
 <div class="wrapper">
-  <div class="container"></div>
+  <div class="container">
+    <aqui-pide-core-global-sidenav [opened]="sideNavOpen">
+      <mat-nav-list sidenav>
+        <a
+          mat-list-item
+          routerLinkActive="active-link"
+          routerLink="/"
+          (click)="sideNavToggle()"
+        >
+          <span class="App__sidenav-text">Home</span>
+        </a>
+      </mat-nav-list>
+      <router-outlet></router-outlet>
+    </aqui-pide-core-global-sidenav>
+  </div>
 </div>
 <aqui-pide-core-global-footer> </aqui-pide-core-global-footer>
