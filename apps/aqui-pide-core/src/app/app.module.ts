@@ -8,10 +8,11 @@ import { GlobalHeaderComponentModule } from "@aqui-pide-core/common/ui";
 import { GlobalFooterModule } from "@aqui-pide-core/common/ui";
 import { GlobalSidenavModule } from "@aqui-pide-core/common/ui";
 import { MatListModule } from "@angular/material/list";
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [BrowserModule, BrowserAnimationsModule, AppRoutingModule, GlobalHeaderComponentModule, GlobalFooterModule, GlobalSidenavModule, MatListModule],
+  imports: [BrowserModule, BrowserAnimationsModule, AppRoutingModule, GlobalHeaderComponentModule, GlobalFooterModule, GlobalSidenavModule, MatListModule, BrowserAnimationsModule],
   providers: [],
   bootstrap: [AppComponent],
 })
