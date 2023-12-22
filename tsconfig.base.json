@@ -19,6 +19,16 @@
     "baseUrl": ".",
     "paths": {
 
+      "@aqui-pide-core/common/styles": [
+        "libs/common/styles/src/index.ts"
+      ],
+      "@aqui-pide-core/common/ui": [
+        "libs/common/ui/src/index.ts"
+      ],
+      "@aqui-pide-core/home": [
+        "libs/home/src/index.ts"
+
+
       "@aqui-pide-core/common/common-guards": [
         "libs/common/common-guards/src/index.ts"
 
@@ -42,6 +52,7 @@
       ],
       "@aqui-pide-core/common/common-environment": [
         "libs/common/common-environment/src/index.ts"
+
 
       ]
     }
