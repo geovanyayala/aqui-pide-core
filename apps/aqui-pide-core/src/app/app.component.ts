@@ -9,7 +9,12 @@ export class AppComponent {
   sideNavOpen = false;
   sideNavOpen = false;
   sideNavOpen = false;
+  sideNavOpen = false;
   title = 'aqui-pide-core';
+
+  sideNavToggle(): void {
+    this.sideNavOpen = !this.sideNavOpen;
+  }
 
   sideNavToggle(): void {
     this.sideNavOpen = !this.sideNavOpen;
