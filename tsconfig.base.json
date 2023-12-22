@@ -18,6 +18,10 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+
+      "@aqui-pide-core/common/common-guards": [
+        "libs/common/common-guards/src/index.ts"
+
       "@aqui-pide-core/common/common-services": [
         "libs/common/common-services/src/index.ts"
       ],
@@ -38,6 +42,7 @@
       ],
       "@aqui-pide-core/common/common-environment": [
         "libs/common/common-environment/src/index.ts"
+
       ]
     }
   },
