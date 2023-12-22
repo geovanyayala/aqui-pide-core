@@ -23,6 +23,9 @@
       ],
       "@aqui-pide-core/common/ui": [
         "libs/common/ui/src/index.ts"
+      ],
+      "@aqui-pide-core/home": [
+        "libs/home/src/index.ts"
       ]
     }
   },
