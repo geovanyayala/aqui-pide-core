@@ -1,0 +1,88 @@
+{
+  "name": "aqui-pide-core",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "application",
+  "sourceRoot": "apps/aqui-pide-core/src",
+  "prefix": "aqui-pide-core",
+  "targets": {
+    "build": {
+      "executor": "@angular-devkit/build-angular:browser",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/apps/aqui-pide-core",
+        "index": "apps/aqui-pide-core/src/index.html",
+        "main": "apps/aqui-pide-core/src/main.ts",
+        "polyfills": "apps/aqui-pide-core/src/polyfills.ts",
+        "tsConfig": "apps/aqui-pide-core/tsconfig.app.json",
+        "inlineStyleLanguage": "scss",
+        "assets": [
+          "apps/aqui-pide-core/src/favicon.ico",
+          "apps/aqui-pide-core/src/assets"
+        ],
+        "styles": ["apps/aqui-pide-core/src/styles.scss"],
+        "scripts": []
+      },
+      "configurations": {
+        "production": {
+          "budgets": [
+            {
+              "type": "initial",
+              "maximumWarning": "500kb",
+              "maximumError": "1mb"
+            },
+            {
+              "type": "anyComponentStyle",
+              "maximumWarning": "2kb",
+              "maximumError": "4kb"
+            }
+          ],
+          "fileReplacements": [
+            {
+              "replace": "apps/aqui-pide-core/src/environments/environment.ts",
+              "with": "apps/aqui-pide-core/src/environments/environment.prod.ts"
+            }
+          ],
+          "outputHashing": "all"
+        },
+        "development": {
+          "buildOptimizer": false,
+          "optimization": false,
+          "vendorChunk": true,
+          "extractLicenses": false,
+          "sourceMap": true,
+          "namedChunks": true
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "serve": {
+      "executor": "@angular-devkit/build-angular:dev-server",
+      "configurations": {
+        "production": {
+          "buildTarget": "aqui-pide-core:build:production"
+        },
+        "development": {
+          "buildTarget": "aqui-pide-core:build:development"
+        }
+      },
+      "defaultConfiguration": "development"
+    },
+    "extract-i18n": {
+      "executor": "@angular-devkit/build-angular:extract-i18n",
+      "options": {
+        "buildTarget": "aqui-pide-core:build"
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint"
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/apps/aqui-pide-core"],
+      "options": {
+        "jestConfig": "apps/aqui-pide-core/jest.config.ts"
+      }
+    }
+  },
+  "tags": []
+}

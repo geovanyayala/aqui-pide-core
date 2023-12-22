@@ -1,0 +1,26 @@
+{
+  "name": "aqui-pide-core-e2e",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/aqui-pide-core-e2e/src",
+  "projectType": "application",
+  "targets": {
+    "e2e": {
+      "executor": "@nx/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/aqui-pide-core-e2e/cypress.json",
+        "devServerTarget": "aqui-pide-core:serve:development"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "aqui-pide-core:serve:production"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"]
+    }
+  },
+  "tags": [],
+  "implicitDependencies": ["aqui-pide-core"]
+}
